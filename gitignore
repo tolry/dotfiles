@@ -1,0 +1,9 @@
+*~
+~$*
+*.swp
+*.swo
+Session.vim
+tags.vendors
+.idea
+.tags*
+.DS_Store
