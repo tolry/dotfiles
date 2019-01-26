@@ -123,7 +123,6 @@ source ~/.bookmarks
 
 
 # symfony2
-alias console='php app/console '
 alias sf='php bin/console '
 
 # fast vim (without config) for editing large files
@@ -132,11 +131,9 @@ alias vim-fast='vim -n -u NONE'
 
 # www specials alias
 alias www='sudo -u www-data '
-alias www-php='sudo -u www-data php '
-alias www-console='sudo -u www-data php app/console'
 
-alias webshare='python -m SimpleHTTPServer'
-
+# open in default linux app
+alias o='xdg-open'
 
 # extract archive
 extract () {
