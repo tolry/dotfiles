@@ -51,7 +51,7 @@ if [ -f ~/.git-prompt.sh ]
 fi
 
 export EDITOR=vim
-PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/bin
+PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.config/composer/vendor/bin:$HOME/bin
 
 # ansi color escape sequences
 prompt_black='\[\e[30m\]'
