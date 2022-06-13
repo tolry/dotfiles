@@ -65,12 +65,13 @@ prompt_cyan='\[\e[36m\]'
 prompt_white='\[\e[37m\]'
 prompt_default_color='\[\e[0m\]'
 prompt_git_ps1='$(__git_ps1 "\\ue0a0%s")'
+prompt_last_cmd='`if [ $? = 0 ]; then echo "\[\e[32m\]✔ "; else echo "\[\e[31m\]✘ "; fi`'
 
 prompt_folder=$'\ue5fe'
 prompt_time=$'\uf64f'
 
 export GIT_PS1_SHOWDIRTYSTATE=1
-PS1="\[\e]0;\w\a\]\n${prompt_time} \t ${prompt_blue}\u@\h ${prompt_yellow}${prompt_folder} \w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n\$ "
+PS1="\[\e]0;\w\a\]\n${prompt_time} \t ${prompt_blue}\u@\h ${prompt_yellow}${prompt_folder} \w ${prompt_cyan}${prompt_git_ps1}${prompt_default_color}\n${prompt_last_cmd}${prompt_default_color}\$ "
 
 # Alias
 alias ls="ls --group-directories-first --color=auto"
