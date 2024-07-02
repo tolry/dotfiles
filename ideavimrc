@@ -1,0 +1,32 @@
+set incsearch hlsearch smartcase ignorecase
+" emulate vim-surround
+set surround
+set multiple-cursors
+set visualbell
+set noerrorbells
+
+let mapleader = ";"
+
+" CloseAllEditorsButActive
+:map <leader>q <Action>(CloseAllEditorsButActive)
+
+" Map \r to the Reformat Code action
+:map <leader>r <Action>(ReformatCode)
+
+" Map <leader>d to start debug
+:map <leader>d <Action>(Debug)
+
+" go to interface implementation
+nmap g] :action GotoImplementation<CR>
+
+"
+" source https://gist.github.com/steveclarke/ba73c6b2e198f14f1b729ad6825c04ca
+"
+
+"rf"
+let g:WhichKeyDesc_recent_files = '<leader>rf Recent Files'
+mmp <leader>rf <Action>(RecentFiles)
+
+"rl"
+let g:WhichKeyDesc_recent_locations = '<leader>rl Recent Locations'
+map <leader>rl <Action>(RecentLocations)
