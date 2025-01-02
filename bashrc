@@ -10,13 +10,15 @@ export LANG=en_US.UTF-8
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
+HISTCONTROL=ignoredups:ignorespace:erasedups
 # ignore svn and git directories on file auto completion
 # (very handy for cd in svn-projects)
 export FIGNORE='.svn:.git'
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
