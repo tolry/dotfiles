@@ -4,8 +4,10 @@ $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
 [](fg:#434C5E bg:#4C566A)\
-$git_branch$git_status\
-[](fg:#4C566A bg:#86BBD8)\
+$git_branch\
+[](fg:#4C566A bg:#D08770)\
+$git_state\
+[](fg:#D08770 bg:#86BBD8)\
 $c$elixir$elm$golang$haskell$java$julia$nim$rust$php\
 [](fg:#86BBD8 bg:#06969A)\
 $docker_context\
@@ -17,6 +19,10 @@ $line_break$character
 
 command_timeout = 5000
 # add_newline = false
+
+[git_state]
+style = "bg:#D08770 fg:#2E3440"
+format = '[ $state( $progress_current/$progress_total) ]($style)'
 
 [username]
 show_always = true
