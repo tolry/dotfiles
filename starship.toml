@@ -28,6 +28,8 @@ format = '[ $state( $progress_current/$progress_total) ]($style)'
 
 [hostname]
 ssh_only = true
+style="bg:#3B4252"
+format="[ $ssh_symbol$hostname ]($style)"
 
 [username]
 show_always = true
