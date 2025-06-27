@@ -1,5 +1,6 @@
 format = """
 [](#3B4252)\
+$hostname\
 $username\
 [](bg:#434C5E fg:#3B4252)\
 $directory\
@@ -7,6 +8,7 @@ $directory\
 $git_branch\
 [](fg:#4C566A bg:#D08770)\
 $git_state\
+$cmd_duration\
 [](fg:#D08770 bg:#86BBD8)\
 $c$elixir$elm$golang$haskell$java$julia$nim$rust$php\
 [](fg:#86BBD8 bg:#06969A)\
@@ -23,6 +25,9 @@ command_timeout = 5000
 [git_state]
 style = "bg:#D08770 fg:#2E3440"
 format = '[ $state( $progress_current/$progress_total) ]($style)'
+
+[hostname]
+ssh_only = true
 
 [username]
 show_always = true
@@ -115,3 +120,8 @@ disabled = false
 time_format = "%R"
 style = "bg:#33658A"
 format = '[ $time ]($style)'
+
+[cmd_duration]
+min_time = 500
+style = "bg:#D08770 fg:#2E3440"
+format = '[cmd took $duration ]($style)'
